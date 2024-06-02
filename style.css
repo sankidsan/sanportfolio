@@ -5,9 +5,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
+
+body {
   background-color: palegreen;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -24,48 +27,45 @@ a,
 .btn {
   transition: all 300ms ease;
 }
-#navbar{
+
+#navbar {
   position: sticky;
   top: 0;
   left: 0;
   z-index: 100;
-  padding: .5rem 5rem;
-  box-shadow: 5px 5px 20px rgba(0,0, 0,.5);
-  background:black;
+  padding: 0.5rem 5rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.navbar .navbar-brand{
+
+.navbar .navbar-brand {
   font-size: 25px;
   font-weight: 800;
-  color:palegreen!important;
-}
-#navbar ul{
-  align-items:self-end;
+  color: palegreen !important;
 }
 
-#navbarSupportedContent .nav-link{
+#navbarSupportedContent .nav-link {
   color: #fff;
   border-bottom: 2px solid transparent;
-
 }
-#navbarSupportedContent .nav-link:hover{
-  
+
+#navbarSupportedContent .nav-link:hover {
   color: palegreen;
-
 }
-#togglee{
+
+#togglee {
   background-color: palegreen;
-  border-color: none;
+  border: none;
+  display: none; /* Hidden by default, will be shown in mobile view */
 }
-
-
-
-
 
 /* SECTIONS */
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -83,10 +83,10 @@ section {
   gap: 5rem;
   height: 80vh;
 }
-#profile h1{
-  font-family:'Abril Fatface',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
+#profile h1 {
+  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 .section__pic-container {
   display: flex;
@@ -99,8 +99,6 @@ section {
   align-self: center;
   text-align: center;
 }
-
-
 
 .section__text__p1 {
   text-align: center;
@@ -141,12 +139,10 @@ section {
 
 .btn {
   font-weight: 600;
-
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
 }
-
 
 .btn-color-2 {
   background-color: black;
@@ -154,17 +150,14 @@ section {
   border-color: black;
 }
 
-
-
 .button-41 {
-  background-color:palegreen;
-  
+  background-color: palegreen;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   color: black;
   cursor: pointer;
   display: inline-block;
-  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
   height: 44px;
   line-height: 44px;
   outline: 0;
@@ -187,28 +180,19 @@ section {
   background: #00bd68;
 }
 
-
-
-
-
-
-
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
 
 #about {
   position: relative;
 }
-#about p{
+
+#about p {
   font-weight: 600;
 }
+
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .about-details-container {
@@ -224,8 +208,9 @@ section {
 .about-pic {
   border-radius: 2rem;
 }
-#pp{
-  font-size:30px;
+
+#pp {
+  font-size: 30px;
 }
 
 .arrow {
@@ -255,8 +240,7 @@ section {
   margin: auto 0;
 }
 
-
-/* PROJECTS  */
+/* PROJECTS */
 
 #projects {
   position: relative;
@@ -273,11 +257,11 @@ section {
   height: 90%;
 }
 
-#para{
-  color:black;
+#para {
+  color: black;
   font-weight: 600;
-  font-family:'Times New Roman', Times, serif;
-  font-size:40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
 }
 
 .project-title {
@@ -290,17 +274,21 @@ section {
   border-color: rgb(163, 163, 163);
 }
 
-/* events */
-#events{
-  padding-top:100px;
+/* EVENTS */
+
+#events {
+  padding-top: 0; /* Adjusted padding */
+  margin-top: 50px; /* Add margin to control spacing */
 }
+
 /* CONTACT */
 
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: auto;
+  margin-top: 50px; /* Add margin to control spacing */
 }
 
 .contact-info-upper-container {
@@ -309,7 +297,7 @@ section {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -326,13 +314,13 @@ section {
   font-size: larger;
 }
 
-
-#contact{
-  margin-top:200px;
+* {
+  box-sizing: border-box;
 }
-* {box-sizing: border-box;}
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -365,133 +353,141 @@ input[type=submit]:hover {
 /* FOOTER SECTION */
 
 footer {
-  height: 10vh;
-  margin-top:100px ;
+  height: auto;
+  margin-top: 50px; /* Adjusted margin */
 }
 
 footer p {
   text-align: center;
 }
 
+/* MEDIA QUERIES */
 
-
-/* media queries */
-@media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
-  }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 10vh;
-      margin-top: 300px;
-    }
-    #pic{
-      margin-top: 20px;
-      height: 250px;
-      width: 250px;
-    }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    #togglee{
-      background-color: palegreen;
-      border-color: none;
-      display:grid;
-    }
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    #events{
-  padding-top:10px;
-    }
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: justify;
-    }
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
   }
 
-  
+  #hamburger-nav {
+    display: flex;
+  }
+
+  #togglee {
+    display: flex; /* Show toggle button in mobile view */
+    align-items: center;
+  }
+
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: auto;
+    margin-top: 50px; /* Adjusted margin */
+  }
+
+  #pic {
+    margin-top: 20px;
+    height: 250px;
+    width: 250px;
+  }
+
+  #profile {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  #togglee {
+    background-color: palegreen;
+    border: none;
+    display: grid;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
+  }
+}
